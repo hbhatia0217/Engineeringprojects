@@ -116,16 +116,12 @@ INSERT INTO time(
 """)
 
 # FIND SONGS
-
+/*Formatting it to PEP8 format*/
 song_select = ("""
-Select s.song_id,a.artist_id 
-from songs s 
-inner join 
-artists a 
+Select s.song_id song_id,a.artist_id artist_id
+from songs s inner join artists a 
 on s.artist_id = a.artist_id 
-where s.title=%s 
-and a.name = %s 
-and s.duration =%s
+where s.title=%s and a.name = %s and s.duration =%s
 """)
 
 # QUERY LISTS
